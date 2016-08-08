@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:onClick="start"
+    tools:context="com.example.ashish.movielisting.rest.Movie_Info">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:orientation="vertical">
+
+        <!-- Login progress -->
+        <ProgressBar
+            android:id="@+id/login_progress"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/movie_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:adjustViewBounds="true" />
+
+        <LinearLayout
+            android:layout_below="@id/movie_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#666666"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/movie_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/movie_image"
+                android:text="Title"
+                android:layout_gravity="center"
+                android:textColor="#fff"
+                android:textSize="12sp" />
+
+            <!-- <RatingBar
+                 android:layout_alignParentBottom="true"
+                 android:id="@+id/movie_ratings"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:stepSize="1"
+                 android:rating="5"
+
+                 />-->
+            <!--  <TextView
+                  android:id="@+id/movie_ratings"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Ratings" />-->
+
+            <TextView
+                android:id="@+id/movie_releasedate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/movie_title"
+                android:text="ReleaseDate"
+                android:layout_gravity="center"
+                android:textColor="#fff"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
