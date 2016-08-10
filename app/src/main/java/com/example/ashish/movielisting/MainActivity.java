@@ -90,9 +90,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    public void start(View view){
+/*    public void start(View view){
         Intent startCollapseActivity = new Intent(MainActivity.this,Movie_Info.class);
         startActivity(startCollapseActivity);
-    }
+    }*/
 
 }

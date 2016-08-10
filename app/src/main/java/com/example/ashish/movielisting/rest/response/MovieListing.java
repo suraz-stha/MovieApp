@@ -1,11 +1,14 @@
 
 package com.example.ashish.movielisting.rest.response;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
 
-public class MovieListing {
+public class MovieListing implements Parcelable {
 
     @SerializedName("page")
     private Integer page;
@@ -21,6 +24,21 @@ public class MovieListing {
 
     @SerializedName("total_results")
     private Integer totalResults;
+
+    protected MovieListing(Parcel in) {
+    }
+
+    public static final Creator<MovieListing> CREATOR = new Creator<MovieListing>() {
+        @Override
+        public MovieListing createFromParcel(Parcel in) {
+            return new MovieListing(in);
+        }
+
+        @Override
+        public MovieListing[] newArray(int size) {
+            return new MovieListing[size];
+        }
+    };
 
     /**
      * @return The page
@@ -92,4 +110,12 @@ public class MovieListing {
         this.totalResults = totalResults;
     }
 
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+    }
 }

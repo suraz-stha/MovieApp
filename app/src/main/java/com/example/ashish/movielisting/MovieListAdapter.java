@@ -41,6 +41,7 @@ public class MovieListAdapter extends RecyclerView.Adapter<MovieListViewHolder> 
         }
         holder.tvmovieReleaseDate.setText(listView.get(position).getReleaseDate());
        // holder.tvMovieRatings.setRating(listView.get(position).getVoteAverage());
+        holder.tvMovieTitle.setTag(listView.get(position));
     }
 
     @Override
