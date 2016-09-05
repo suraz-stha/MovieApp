@@ -1,4 +1,4 @@
-package com.example.ashish.movielisting;
+package com.example.ashish.movielisting.adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -7,7 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.bumptech.glide.Glide;
+import com.example.ashish.movielisting.R;
 import com.example.ashish.movielisting.rest.response.Result;
+import com.example.ashish.movielisting.viewholders.MovieListViewHolder;
 
 import java.util.ArrayList;
 
